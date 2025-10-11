@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 :root {
     --backgroud-color: #008080;
     --accent-color: #000080;
@@ -16,6 +14,13 @@ body {
     width: 100vw;
     display: grid;
     grid-template-columns: minmax(27ex, 17vw) 1fr;
+}
+
+@media (max-width: 700px) {
+    body {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
 
 h1 {
@@ -84,6 +89,50 @@ button:active {
 .social-buttons>button {
     height: 100%;
     padding: 4px;
+}
+
+@media (max-width: 700px) {
+    .sidebar {
+        display: none;
+        width: 30ex;
+        position: fixed;
+        left: 0;
+        bottom: calc(2ch + 18px);
+        z-index: 2;
+        box-shadow: -1px -1px var(--window-border), inset 1px 1px var(--window-background), inset -2px -2px grey, inset 2px 2px white;
+    }
+}
+
+.start-menu {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .start-menu {
+        background-color: var(--window-background);
+        height: 10ch;
+        display: flex;
+        padding: 0.5ch 0.5ex;
+        box-shadow: 0 -1px 0 0 var(--window-border), inset 0 1px 0 0 var(--window-background), inset 0 -2px 0 0 grey, inset 0 2px 0 0 white;
+    }
+}
+
+.start-menu button {
+    font-weight: bold;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.start-menu button span {
+    font-size: 18px;
+}
+
+.start-menu button img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 3ch;
+    width: 3ch;
 }
 
 main {
