@@ -18,8 +18,11 @@ body {
 
 @media (max-width: 700px) {
     body {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 }
 
@@ -105,12 +108,18 @@ button:active {
 
 .start-menu {
     display: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: calc(2ch + 8px);
+    width: 100%;
+    z-index: 1;
 }
+
 
 @media (max-width: 700px) {
     .start-menu {
         background-color: var(--window-background);
-        height: 10ch;
         display: flex;
         padding: 0.5ch 0.5ex;
         box-shadow: 0 -1px 0 0 var(--window-border), inset 0 1px 0 0 var(--window-background), inset 0 -2px 0 0 grey, inset 0 2px 0 0 white;
@@ -135,12 +144,25 @@ button:active {
     width: 3ch;
 }
 
+.screen-bottom-padding {
+    display: none;
+    height: calc(2ch + 8px);
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    .screen-bottom-padding {
+        display: block;
+    }
+}
+
 main {
     padding: 3vh 2.5vw;
     display: flex;
     gap: 2vh;
     flex-direction: column;
     overflow-y: auto;
+    flex-grow: 1;
 }
 
 .titlebar {
