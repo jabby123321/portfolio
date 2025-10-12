@@ -34,7 +34,7 @@ img {
     height: 100%;
 }
 
-button {
+button, .link-btn {
     background: var(--window-background);
     border: none;
     border-radius: 0;
@@ -42,7 +42,7 @@ button {
     cursor: pointer;
 }
 
-button:active {
+button:active, .link-btn:active {
     box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px #808080;
 }
 
@@ -89,7 +89,7 @@ button:active {
     height: 5ch;
 }
 
-.social-buttons>button {
+.social-buttons>.link-btn {
     height: 100%;
     padding: 4px;
 }

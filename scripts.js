@@ -36,3 +36,5 @@ window.addEventListener("resize", function (event) {
         startMenuActive = true; s
     }
 });
+
+document.getElementById("github-btn").addEventListener("click", window.open("https://github.com/jabby123321", '_blank'));
